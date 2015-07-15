@@ -1,0 +1,17 @@
+{
+    "contents" : "\nlibrary(twitteR)\nlibrary(plyr)\nlibrary(ROAuth)\nlibrary(RCurl)\nlibrary(httr)\nlibrary(base64enc)\nlibrary(RJSONIO)\nlibrary(jsonlite)\n\n\ndownload.file(url=\"http://curl.haxx.se/ca/cacert.pem\",\n              destfile=\"cacert.pem\")\n\nrequestURL <- \"https://api.twitter.com/oauth/request_token\"\naccessURL <- \"https://api.twitter.com/oauth/access_token\"\nauthURL <- \"https://api.twitter.com/oauth/authorize\"\nconsumer_key <- \"DjxA4kWlsymI0ReSon4FWpYZL\"\nconsumer_secret <- \"IzTR91haOB1ijWNXYmsL7u5fUyXBPIDmTK4HnISmw7t5668NNB\"\naccess_token = \"500418248-nyIkXrZgemcZw3yOSd270zFkMCwRdUn0MAIhL6z2\"\naccess_tokensecret = \"w1kNzujwOsp2xU1Epnurfv9aQU1kI21s02Edx8vlYR0zW\"\n\nmyapp <- oauth_app(\"twitter\",\n                   key = consumer_key,\n                   secret = consumer_secret\n)\n\n\n\n# 3. Get OAuth credentials\ntwitter_token <- oauth1.0_token(oauth_endpoints(\"twitter\"), myapp)\n\n# 4. Use API\nreq <- GET(\"https://api.twitter.com/1.1/statuses/user_timeline.json?q=DataTiles\",\n           config(token = twitter_token))\n\nstop_for_status(req)\ncontent(req)\ndatas <- fromJSON(req)\n\n\n\n\n\n\n\n",
+    "created" : 1437002437646.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1476674123",
+    "id" : "BEA5479D",
+    "lastKnownWriteTime" : 1437002596,
+    "path" : "~/twi.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

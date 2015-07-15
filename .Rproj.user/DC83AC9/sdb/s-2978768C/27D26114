@@ -1,0 +1,17 @@
+{
+    "contents" : "library(RCurl)\n# Hello, world!\n#\n# This is an example function named 'hello'\n# which prints 'Hello, world!'.\n#\n# You can learn more about package authoring with RStudio at:\n#\n#   http://r-pkgs.had.co.nz/\n#\n# Some useful keyboard shortcuts for package authoring:\n#\n#   Build and Reload Package:  'Cmd + Shift + B'\n#   Check Package:             'Cmd + Shift + E'\n#   Test Package:              'Cmd + Shift + T'\n\nhello <- function() {\n  print(\"Hello, world!\")\n}\n\ndtioGetJsonData <- function(){\n  jsonData <- fromJSON(\"http://107.170.212.140:8080/datatiles-ws/api/dataasset?category=Consumer&limit=100\")\n  jsonData\n}\n\n\n",
+    "created" : 1436998290212.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2821224202",
+    "id" : "27D26114",
+    "lastKnownWriteTime" : 1437002596,
+    "path" : "~/datatiles/R/hello.R",
+    "project_path" : "R/hello.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

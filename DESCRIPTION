@@ -1,0 +1,10 @@
+Package: datatiles
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1
+Date: 2015-07-15
+Author: sudhir
+Maintainer: sudhir.wadhwa@gmail.com
+Description: get the Data
+License: MIT
+LazyData: TRUE
